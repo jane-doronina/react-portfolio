@@ -11,6 +11,7 @@ export default {
         white: "#ffffff",
         lightGrey: "rgb(241, 241, 241)",
         darkGrey: "rgb(51, 51, 51)",
+        grey: "#767676"
       },
       fontFamily: {
         jost: ['Jost', "sans-serif"],

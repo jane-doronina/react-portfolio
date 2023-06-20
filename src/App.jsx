@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
 
 const App = () => (
-  <div className="container py-6">
+  <div className="bg-lightGrey">
     <Navbar />
+    <Banner />
   </div>
 )
 
