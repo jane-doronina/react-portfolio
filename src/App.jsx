@@ -1,9 +1,9 @@
-import React from 'react'
+import Navbar from "./components/Navbar";
 
-const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+const App = () => (
+  <div className="container py-6">
+    <Navbar />
+  </div>
+)
 
 export default App

@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         white: "#ffffff",

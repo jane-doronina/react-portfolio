@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Jost", sans-serif;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
