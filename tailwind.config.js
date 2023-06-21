@@ -10,8 +10,9 @@ export default {
       colors: {
         white: "#ffffff",
         lightGrey: "rgb(241, 241, 241)",
-        darkGrey: "rgb(51, 51, 51)",
-        grey: "#767676"
+        darkGrey: "rgb(42, 42, 42)",
+        mediumDarkGrey: "rgb(56, 56, 56)",
+        grey: "rgb(80, 80, 80)"
       },
       fontFamily: {
         jost: ['Jost', "sans-serif"],
