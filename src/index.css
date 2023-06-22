@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Jost", sans-serif;
 }
@@ -68,4 +71,18 @@ a {
 .screenshots {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+
+/* INFO WINDOW TRANSITION */
+.button-transition {
+  transition: padding 0.5s ease;
+}
+.info {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.info-visible {
+  opacity: 1;
 }

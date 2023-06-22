@@ -1,4 +1,5 @@
 import Image from "./Image";
+
 import { useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
@@ -26,8 +27,8 @@ const Screenshots = ({images}) => {
   }
 
   return (
-    <div className="w-[70%] relative">
-      <div id="screenshots-section" className="p-16 h-[100%] mx-auto overflow-y-auto screenshots" onScroll={handleScroll}>
+    <>
+      <div id="screenshots-section" className="h-[100%] mx-auto overflow-y-auto screenshots" onScroll={handleScroll}>
         {images.map((image, i) => <Image key={i} src={image} />)}
       </div>
       {downArrow ?
@@ -38,7 +39,7 @@ const Screenshots = ({images}) => {
           icon={faArrowUp}
           className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce"
         />}
-    </div>
+    </>
   )
 }
 
