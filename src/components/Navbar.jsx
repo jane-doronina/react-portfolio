@@ -9,7 +9,7 @@ const Navbar = () => {
         <h3 className='font-jost font-bold text-lg'>Jane Doronina</h3>
         <div className="flex w-[30%] justify-between">
           <ul className='list-none flex justify-end items-center'>
-            <li className='mr-6'>Projects</li>
+            <li className='mr-6'><a href="#projects" className="scroll-smooth">Projects</a></li>
             <li>About</li>
           </ul>
           <div>

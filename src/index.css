@@ -8,6 +8,10 @@ body {
   font-family: "Jost", sans-serif;
 }
 
+a {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -53,4 +57,15 @@ body {
   animation-fill-mode: forwards;
   top: 0;
   transform: translate(0, -100%);
+}
+
+/* SCROLLBAR ON SCREENSHOTS */
+.screenshots::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.screenshots {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
