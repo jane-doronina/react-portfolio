@@ -8,6 +8,16 @@ import furniture2 from "../assets/furniture2.png";
 import furniture3 from "../assets/furniture3.png";
 import furniture4 from "../assets/furniture4.png";
 
+import gallery1 from "../assets/gallery1.jpeg";
+import gallery2 from "../assets/gallery2.jpg";
+import gallery3 from "../assets/gallery3.jpeg";
+import gallery4 from "../assets/gallery4.jpg";
+import gallery5 from "../assets/gallery5.jpeg";
+import gallery6 from "../assets/gallery6.jpg";
+import gallery7 from "../assets/gallery7.jpg";
+import gallery8 from "../assets/gallery8.jpg";
+import gallery9 from "../assets/gallery9.jpg";
+
 export const projects = [
   {
     id: "remost",
@@ -46,3 +56,6 @@ export const projects = [
     url: "https://www.remost.io/"
   },
 ];
+
+
+export const gallery = [gallery1, gallery2, gallery7, gallery3, gallery4, gallery9, gallery5, gallery6, gallery8]
