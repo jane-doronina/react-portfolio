@@ -2,7 +2,7 @@ import Gallery from "./Gallery";
 
 const LifeStyle = () => {
   return (
-    <div className="flex z-[2] w-[100%]">
+    <div className="flex z-[2] w-[100%] animate-image">
       <Gallery />
       <div className="bg-white w-[30%] rounded-r-3xl pt-[7%] px-12">
         <h3 className="text-[20px] font-bold">Passionate Developer. Adventurous Soul. Lover of Music, Festivals, and Exploration.</h3>

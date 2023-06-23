@@ -59,3 +59,21 @@ export const projects = [
 
 
 export const gallery = [gallery1, gallery2, gallery7, gallery3, gallery4, gallery9, gallery5, gallery6, gallery8]
+
+export const me = {
+  bio: "Hi, I’m Zhanna! It took me five years and three career paths to find my passion and perfect professional combination – using my marketing background and user-centric approach to create Web Apps with beautiful UI and seamless user experience. I began my coding journey a year ago and during this time, I graduated from Le Wagon's intensive Full-stack Web Development Bootcamp, learnt multiple new technologies, started teaching and mentoring other students, and had the opportunity to work on a number of Full-stack and Front-end projects, broadening my experience and skill set.",
+  questions: [
+    {
+      topic: "At work I'm best at...",
+      answer: "Learning and adapting fast. I strongly believe in life-long learning and really thrive on environments that require me to constantly grasp new concepts and improve in order to excel at my job."
+    },
+    {
+      topic: "I want to work for a company that...",
+      answer: "values collaboration and fosters a positive, supportive work environment. I'm excited about working in a purpose-driven team that shares my passion for delivering exceptional products."
+    },
+    {
+      topic: "I enjoy coding because...",
+      answer: "I found my passion in combining my previous design and marketing skills with technical problem-solving to create aesthetically pleasing, functional user interfaces."
+    }
+  ]
+}

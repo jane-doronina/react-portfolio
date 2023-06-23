@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Button = ({text, onClick, padding, icon}) => {
+const Button = ({text, onClick, padding, icon, bg}) => {
   return (
-    <button className={`py-[7px] ${padding} rounded-full bg-darkGrey text-white font-light button-transition`} onClick={onClick}>
+    <button className={`py-[7px] ${padding} rounded-full ${bg} font-light button-transition`} onClick={onClick}>
     {text}
     { icon && <FontAwesomeIcon icon={icon} className='ml-2 text-[12px]' />}
     </button>
