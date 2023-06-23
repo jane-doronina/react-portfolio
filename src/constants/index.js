@@ -30,7 +30,7 @@ export const projects = [
   {
     id: "mclub",
     name: "Mclub online-shop",
-    type: "Full-Stack Rails App",
+    type: "React/Redux App",
     description: "Remost is a Ruby on Rails App for remote and hybrid teams which allows employees to find and meet their colleagues in different cities and get the best of both worlds: the freedom of a digital nomad's life and the human touch of an office's watercooler area.",
     techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
     images: [ remost1, remost2, remost3, remost4 ],
