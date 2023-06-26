@@ -1,4 +1,3 @@
-import { useState } from "react"
 import work from "../assets/work.jpg"
 import stack from "../assets/stack.png"
 import { me } from "../constants"

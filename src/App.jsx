@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => (
@@ -13,6 +14,7 @@ const App = () => (
       <Route path="/projects/:projectId" element={ <Projects />} />
     </Routes>
     <About />
+    <Footer />
   </div>
 )
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,8 +13,8 @@ export const FrontCard = ({topic}) => {
 
 export const BackCard = ({question}) => {
   return (
-    <div className="w-[100%] h-[100%] flex flex-col justify-start items-center text-white text-center bg-darkGrey rounded-xl relative p-6">
-      <p className="px-2 uppercase text-[12px] mb-2">{question.topic}</p>
+    <div className="w-[100%] h-[100%] flex flex-col justify-start text-white bg-darkGrey rounded-xl relative p-6">
+      <p className="uppercase text-[12px] mb-2">{question.topic}</p>
       <p className='text-[14px] font-light'>{question.answer}</p>
       <FontAwesomeIcon icon={faCircleArrowRight} className='text-[20px] absolute bottom-[15px] right-[15px]' />
     </div>
