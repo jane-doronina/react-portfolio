@@ -11,6 +11,7 @@ const Contact = () => {
         </div>
         <form name="contact" className="mt-5 w-[50%]" method="POST" netlify>
           <div className="flex justify-between">
+            <input type="hidden" name="form-name" value="contact" />
             <input type="text" name="name" placeholder="Your Name" className="w-[50%] mr-[10px] text-[18px] focus:outline-0 focus-visible:outline-0 rounded-full border-[1px] border-darkGrey px-8 py-2 text-gray-900 placeholder:text-darkGrey"/>
             <input type="email" name="email" placeholder="Your Email" className="w-[50%] rounded-full text-[18px] focus:outline-0 focus-visible:outline-0 border-[1px] border-darkGrey px-8 py-2 text-gray-900 placeholder:text-darkGrey"/>
           </div>
