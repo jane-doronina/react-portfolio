@@ -65,7 +65,7 @@ export const me = {
   questions: [
     {
       topic: "At work I'm best at...",
-      answer: "Learning and adapting fast. I strongly believe in life-long learning and really thrive on environments that require me to constantly grasp new concepts and improve in order to excel at my job."
+      answer: "learning and adapting fast. I strongly believe in life-long learning and really thrive on environments that require me to constantly grasp new concepts and improve in order to excel at my job."
     },
     {
       topic: "I want to work for a company that...",

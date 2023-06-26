@@ -10,11 +10,15 @@ const Navbar = () => {
         <div className="flex w-[30%] justify-between">
           <ul className='list-none flex justify-end items-center'>
             <li className='mr-6'><a href="#projects" className="scroll-smooth">Projects</a></li>
-            <li>About</li>
+            <li><a href="#about" className="scroll-smooth">About</a></li>
           </ul>
           <div>
-            <FontAwesomeIcon icon={faEnvelope} className='mr-5' />
+          <a href="mailto:doronina.jane.work@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} className="mr-5" />
+          </a>
+          <a href="https://www.linkedin.com/in/zhanna-doronina" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
           </div>
         </div>
       </div>
