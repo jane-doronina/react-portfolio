@@ -9,7 +9,7 @@ const Contact = () => {
           <h3 className="text-6xl leading-[70px] border-b-4 border-b-darkGrey pb-8 text-darkGrey font-bold z-[5]">Searching for a Developer to join your team?</h3>
           <p className="mt-3 text-3xl font-light text-grey">Let's create some <span className="font-bold z-[5]">great</span> things together!</p>
         </div>
-        <form name="contact" netlify className="mt-5 w-[50%]">
+        <form name="contact" className="mt-5 w-[50%]" method="POST" netlify>
           <div className="flex justify-between">
             <input type="text" name="name" placeholder="Your Name" className="w-[50%] mr-[10px] text-[18px] focus:outline-0 focus-visible:outline-0 rounded-full border-[1px] border-darkGrey px-8 py-2 text-gray-900 placeholder:text-darkGrey"/>
             <input type="email" name="email" placeholder="Your Email" className="w-[50%] rounded-full text-[18px] focus:outline-0 focus-visible:outline-0 border-[1px] border-darkGrey px-8 py-2 text-gray-900 placeholder:text-darkGrey"/>
