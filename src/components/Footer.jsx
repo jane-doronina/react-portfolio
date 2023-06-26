@@ -4,7 +4,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-3">
+    <footer className="bg-white pt-14">
       <div className="container py-6 flex justify-between border-t-2 border-t-lightGrey">
         <p>Copyright © 2023 <span className="font-bold">Zhanna Doronina</span>. Coded with 🖤 and React JS.</p>
         <div>
