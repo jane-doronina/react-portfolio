@@ -7,6 +7,7 @@ import Screenshots from "./Screenshots"
 import { projects } from "../constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Projects = () => {
   const [infoIsOpen, setInfoIsOpen] = useState(false);
@@ -33,8 +34,11 @@ const Projects = () => {
           </div>
           <div className="w-[70%] relative px-14">
             <div className="absolute left-[20px] w-[95%] flex justify-between py-5">
-              <Button text={infoIsOpen ? <FontAwesomeIcon icon={faXmark} className="font-light" /> : "Info" } padding={infoIsOpen ? "px-[14px]" : "px-[20px]" } onClick={openInfoHandler}/>
-              <Button text="Visit website" padding="px-[20px]" icon={faArrowUpRightFromSquare} onClick={() => externalLinkHandler(selectedProject.url)}/>
+              <Button text={infoIsOpen ? <FontAwesomeIcon icon={faXmark} className="font-light" /> : "Info" } padding={infoIsOpen ? "px-[14px]" : "px-[20px]" } bg={selectedProject.color} onClick={openInfoHandler}/>
+              <div className="flex">
+                <Button text="Visit website" padding="px-[20px]" icon={faArrowUpRightFromSquare} bg={selectedProject.color} onClick={() => externalLinkHandler(selectedProject.url)}/>
+                { selectedProject.github && (<div className={`ml-2 h-[38px] w-[38px] flex justify-center items-center ${selectedProject.color} text-[21px] rounded-full cursor-pointer button-transition`}><FontAwesomeIcon icon={faGithub} onClick={() => externalLinkHandler(selectedProject.github)} /></div>)}
+              </div>
             </div>
             <InfoWindow project={selectedProject} visibility={infoClassName} />
             <Screenshots key={projectId} images={selectedProject.images}/>

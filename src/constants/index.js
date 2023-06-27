@@ -2,11 +2,33 @@ import remost1 from "../assets/remost1.png";
 import remost2 from "../assets/remost2.png";
 import remost3 from "../assets/remost3.png";
 import remost4 from "../assets/remost4.png";
+import remostmob from "../assets/remostmob.png";
 
 import furniture1 from "../assets/furniture1.png";
 import furniture2 from "../assets/furniture2.png";
 import furniture3 from "../assets/furniture3.png";
 import furniture4 from "../assets/furniture4.png";
+import furniture5 from "../assets/furniture5.png";
+
+import mclub1 from "../assets/mclub1.png";
+import mclub2 from "../assets/mclub2.png"
+import mclub3 from "../assets/mclub3.png"
+import mclub4 from "../assets/mclub4.png"
+import mclubmob from "../assets/mclubmob.png"
+
+import watchlist1 from "../assets/watchlist1.png";
+import watchlist2 from "../assets/watchlist2.png"
+import watchlist3 from "../assets/watchlist3.png"
+import watchlist4 from "../assets/watchlist4.png"
+
+import news1 from "../assets/news1.png";
+import newsmob from "../assets/newsmob.png"
+
+import hoobank1 from "../assets/hoobank1.png";
+import hoobank2 from "../assets/hoobank2.png";
+import hoobank3 from "../assets/hoobank3.png";
+import hoobank4 from "../assets/hoobank4.png";
+import hoobank5 from "../assets/hoobank5.png"
 
 import gallery1 from "../assets/gallery1.jpeg";
 import gallery2 from "../assets/gallery2.jpg";
@@ -25,8 +47,9 @@ export const projects = [
     type: "Full-Stack Rails App",
     description: "Remost is a Ruby on Rails App for remote and hybrid teams which allows employees to find and meet their colleagues in different cities and get the best of both worlds: the freedom of a digital nomad's life and the human touch of an office's watercooler area.",
     techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
-    images: [ remost1, remost2, remost3, remost4 ],
-    url: "https://www.remost.io/"
+    images: [ {img: remost1, type: "desktop"}, {img: remostmob, type: "mobile"}, {img: remost2, type: "desktop"}, {img: remost3, type: "desktop"}, {img: remost4, type: "desktop"} ],
+    url: "https://www.remost.io/",
+    color: "bg-pink text-white",
   },
   {
     id: "obscure",
@@ -34,17 +57,21 @@ export const projects = [
     type: "Full-Stack Rails App",
     description: "Obscure is a furniture rental marketplace (desktop version only for now!) built for educational purposes using Ruby on Rails framework. The main purpose of this project was to practice creating a marketplace using Ruby on Rails framework and modern web development workflow. It was a great way to master all basic CRUD actions, practice using AJAX for dynamic searching as well as using Turbo Streams to apply rails validations and render errors to users.",
     techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
-    images: [ furniture1, furniture2, furniture3, furniture4 ],
-    url: "https://obscure.up.railway.app/"
+    images: [ {img: furniture1, type: "desktop"}, {img: furniture2, type: "desktop"}, {img: furniture4, type: "desktop"}, {img: furniture3, type: "desktop"}, {img: furniture5, type: "desktop"} ],
+    url: "https://obscure.up.railway.app/",
+    github: "https://github.com/Marionator/furniture",
+    color: "bg-yellow text-white",
   },
   {
     id: "mclub",
     name: "Mclub online-shop",
     type: "React/Redux App",
-    description: "Remost is a Ruby on Rails App for remote and hybrid teams which allows employees to find and meet their colleagues in different cities and get the best of both worlds: the freedom of a digital nomad's life and the human touch of an office's watercooler area.",
-    techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
-    images: [ remost1, remost2, remost3, remost4 ],
-    url: "https://www.remost.io/"
+    description: "An online shop built to practice React functional components (with Hooks) and state management using Redux.",
+    techStack: "React JS (with Hooks), styled components (CSS in JS), Redux, Firebase, Stripe.",
+    images: [ {img: mclub1, type: "desktop"}, {img: mclubmob, type: "mobile"}, {img: mclub2, type: "desktop"}, {img: mclub3, type: "desktop"}, {img: mclub4, type: "desktop"} ],
+    url: "https://mclub-shop.netlify.app/",
+    github: "https://github.com/jane-doronina/react-online-shop",
+    color: "bg-green text-darkGrey",
   },
   {
     id: "watchlist",
@@ -52,9 +79,33 @@ export const projects = [
     type: "Full-Stack Rails App",
     description: "Remost is a Ruby on Rails App for remote and hybrid teams which allows employees to find and meet their colleagues in different cities and get the best of both worlds: the freedom of a digital nomad's life and the human touch of an office's watercooler area.",
     techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
-    images: [ remost1, remost2, remost3, remost4 ],
-    url: "https://www.remost.io/"
+    images: [ {img: watchlist1, type: "desktop"}, {img: watchlist2, type: "desktop"}, {img: watchlist3, type: "desktop"}, {img: watchlist4, type: "desktop"} ],
+    url: "https://www.remost.io/",
+    github: "https://github.com/jane-doronina/rails-watch-list",
+    color: "bg-red text-white"
   },
+  {
+    id: "hoobank",
+    name: "Hoobank",
+    type: "Landing page",
+    description: "A landing page for modern online bank built with React functional components. Project implementation based on tutorial by JS Mastery Pro - https://jsmastery.pro 🎨 Design by: https://www.oneweekwonders.com | https://dribbble.com/OWWStudio",
+    techStack: "React, Tailwind CSS",
+    images: [ {img: hoobank1, type: "desktop"}, {img: hoobank2, type: "desktop"}, {img: hoobank3, type: "desktop"}, {img: hoobank4, type: "desktop"}, {img: hoobank5, type: "desktop"} ],
+    url: "https://hoobank-modern-bank-react.netlify.app/",
+    github: "https://github.com/jane-doronina/react-modern-bank",
+    color: "bg-blue text-white"
+  },
+  {
+    id: "news",
+    name: "News Homepage",
+    type: "Landing page",
+    description: "This is a solution to the News homepage challenge on Frontend Mentor. The main purpose for completing this project was to practice creating responsive layouts with pure CSS using Grids and Flexbox. The primary challenges included making the optimal layout decisions based on JPEG design files and implementing the toggle for mobile menu with vanilla JS.",
+    techStack: "HTML, CSS, JavaScript",
+    images: [ {img: news1, type: "desktop"}, {img: newsmob, type: "mobile"} ],
+    url: "https://fabulous-bunny-7039f6.netlify.app/",
+    github: "https://github.com/jane-doronina/news-homepage",
+    color: "bg-brightBlue text-white"
+  }
 ];
 
 

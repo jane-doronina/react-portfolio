@@ -12,7 +12,13 @@ export default {
         lightGrey: "rgb(241, 241, 241)",
         darkGrey: "rgb(42, 42, 42)",
         mediumDarkGrey: "rgb(56, 56, 56)",
-        grey: "rgb(80, 80, 80)"
+        grey: "rgb(80, 80, 80)",
+        pink: "rgb(255, 90, 81)",
+        green: "rgb(178, 225, 64)",
+        yellow: "rgb(209, 168, 8)",
+        red: "rgb(254, 0, 80)",
+        blue: "rgb(51, 185, 207)",
+        brightBlue: "rgb(65, 80, 221)"
       },
       fontFamily: {
         jost: ['Jost', "sans-serif"],

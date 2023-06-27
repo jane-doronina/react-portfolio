@@ -76,8 +76,9 @@ a {
 
 /* INFO WINDOW TRANSITION */
 .button-transition {
-  transition: padding 0.5s ease;
+  transition: padding 0.5s ease, background-color 0.8s ease;
 }
+
 .info {
   opacity: 0;
   transition: opacity 0.5s ease;

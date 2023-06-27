@@ -28,8 +28,8 @@ const Screenshots = ({images}) => {
 
   return (
     <>
-      <div id="screenshots-section" className="h-[100%] mx-auto overflow-y-auto screenshots" onScroll={handleScroll}>
-        {images.map((image, i) => <Image key={i} src={image} />)}
+      <div id="screenshots-section" className="h-[100%] mx-auto overflow-y-auto screenshots px-14" onScroll={handleScroll}>
+        {images.map((image, i) => <Image key={i} image={image} />)}
       </div>
       {downArrow ?
         <FontAwesomeIcon
