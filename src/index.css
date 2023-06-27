@@ -7,8 +7,11 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Jost", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -85,10 +88,16 @@ a {
 
 
 .animated-title > div {
-  height: 50%;
   overflow: hidden;
   position: absolute;
   width: 50%;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .animated-title > div {
+    width: 100%;
+  }
 }
 
 .animated-title > div.text-top div {

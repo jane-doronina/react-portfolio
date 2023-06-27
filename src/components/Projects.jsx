@@ -26,14 +26,14 @@ const Projects = () => {
 
   return (
     <section id="projects" className="w-full bg-lightGrey h-[100vh]">
-      <div className="container mt-[50px]">
-        <h2 className="text-7xl text-white uppercase font-bold relative bottom-[-15px] z-[0] ml-5">Latest projects</h2>
-        <div className="bg-white rounded-3xl w-[100%] h-[80vh] z-[1] relative flex">
-          <div className="w-[30%] h-[100%] rounded-l-3xl bg-darkGrey py-10 px-3">
+      <div className="container px-2 md:px-0 mt-0 md:mt-[50px]">
+        <h2 className="text-5xl md:text-7xl text-white uppercase font-bold relative bottom-[-15px] z-[0] ml-5">Latest projects</h2>
+        <div className="bg-white rounded-3xl w-[100%] h-[80vh] z-[1] relative flex flex-col-reverse md:flex-row">
+          <div className="w-[100%] md:w-[30%] h-[40vh] overflow-y-auto md:h-[100%] rounded-b-3xl md:rounded-l-3xl bg-darkGrey py-10 px-3">
             {projects.map(project => <MenuItem key={project.id} project={project} selected={project === selectedProject}/>)}
           </div>
-          <div className="w-[70%] relative px-14">
-            <div className="absolute left-[20px] w-[95%] flex justify-between py-5">
+          <div className="w-[100%] md:w-[70%] h-[40vh] md:h-[100%] relative px-2 md:px-14">
+            <div className="absolute left-2 md:left-[20px] w-[95%] flex justify-between py-5">
               <Button text={infoIsOpen ? <FontAwesomeIcon icon={faXmark} className="font-light" /> : "Info" } padding={infoIsOpen ? "px-[14px]" : "px-[20px]" } bg={selectedProject.color} onClick={openInfoHandler}/>
               <div className="flex">
                 <Button text="Visit website" padding="px-[20px]" icon={faArrowUpRightFromSquare} bg={selectedProject.color} onClick={() => externalLinkHandler(selectedProject.url)}/>
