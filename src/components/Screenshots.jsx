@@ -26,19 +26,29 @@ const Screenshots = ({images}) => {
     prevScrollY.current = currentScrollY;
   }
 
+  const scrollToNextImage = (e) => {
+    const container = e.currentTarget.parentElement;
+    container.scrollBy(0, 360);
+  }
+
+  const scrollToPreviousImage = (e) => {
+    const container = e.currentTarget.parentElement;
+    container.scrollBy(0, -360);
+  }
+
   return (
     <>
-      <div id="screenshots-section" className="h-[100%] mx-auto overflow-y-auto screenshots px-14" onScroll={handleScroll}>
+      <div id="screenshots-section" className="h-[100%] mx-auto scroll-snap-y mandatory overflow-y-scroll screenshots px-14" onScroll={handleScroll}>
         {images.map((image, i) => <Image key={i} image={image} />)}
+        {downArrow ?
+          <FontAwesomeIcon
+            icon={faArrowDown}
+            className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce" onClick={scrollToNextImage}
+          /> : <FontAwesomeIcon
+            icon={faArrowUp}
+            className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce" onClick={scrollToPreviousImage}
+          />}
       </div>
-      {downArrow ?
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce"
-        /> : <FontAwesomeIcon
-          icon={faArrowUp}
-          className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce"
-        />}
     </>
   )
 }
