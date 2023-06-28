@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
 
-const Image = ({image}) => {
+const Image = ({image, active}) => {
   const { img, type } = image
+
   return (
-    <img src={img} className={`w-[100%] object-cover rounded-xl ${ type === "desktop" ? "border-8 border border-gray-700" : ""} mb-[50px] first:mt-20 animate-image`}/>
+    <img
+          src={img}
+          className={`object-contain rounded-xl ${ type === "desktop" ? "border-8 border border-darkGrey" : ""} animate-image`}
+          />
   )
 }
 

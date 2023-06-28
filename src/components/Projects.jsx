@@ -32,8 +32,8 @@ const Projects = () => {
           <div className="w-[100%] md:w-[30%] h-[40vh] overflow-y-auto md:h-[100%] rounded-b-3xl md:rounded-l-3xl bg-darkGrey py-10 px-3">
             {projects.map(project => <MenuItem key={project.id} project={project} selected={project === selectedProject}/>)}
           </div>
-          <div className="w-[100%] md:w-[70%] h-[40vh] md:h-[100%] relative px-2 md:px-14">
-            <div className="absolute left-2 md:left-[20px] w-[95%] flex justify-between py-5">
+          <div className="w-[100%] md:w-[70%] h-[40vh] md:h-[100%] relative px-2 md:px-14 flex justify-center items-center">
+            <div className="absolute left-2 top-0 md:left-[20px] w-[95%] flex justify-between py-5">
               <Button text={infoIsOpen ? <FontAwesomeIcon icon={faXmark} className="font-light" /> : "Info" } padding={infoIsOpen ? "px-[14px]" : "px-[20px]" } bg={selectedProject.color} onClick={openInfoHandler}/>
               <div className="flex">
                 <Button text="Visit website" padding="px-[20px]" icon={faArrowUpRightFromSquare} bg={selectedProject.color} onClick={() => externalLinkHandler(selectedProject.url)}/>

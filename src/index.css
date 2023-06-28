@@ -66,7 +66,7 @@ a {
   transform: scale(1.2);
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -74,7 +74,7 @@ a {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
@@ -116,18 +116,6 @@ a {
   transform: translate(0, -100%);
 }
 
-/* SCROLLBAR ON SCREENSHOTS */
-.screenshots::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.screenshots {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
 /* INFO WINDOW TRANSITION */
 .button-transition {
   transition: padding 0.5s ease, background-color 0.8s ease;
@@ -142,21 +130,19 @@ a {
   opacity: 1;
 }
 
+.animate-image {
+  animation: appear 1.2s ease-in-out;
+}
 
 @keyframes appear {
   0% {
     opacity: 0;
-    /* transform: translateX(); */
   }
   100% {
     opacity: 1;
-    /* transform: translateX(0); */
   }
 }
 
-.animate-image {
-  animation: appear 1.2s ease-in-out;
-}
 
 .gallery-column-1 {
   animation: slideImages 40s linear infinite;

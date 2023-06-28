@@ -1,53 +1,54 @@
 import Image from "./Image";
 
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faCircleArrowRight, faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Screenshots = ({images}) => {
-  const [downArrow, setDownArrow] = useState(true);
-  const prevScrollY = useRef(0);
+  const [rightArrowVisible, setRightArrowVisible] = useState(true);
+  const [leftArrowVisible, setLeftArrowVisible] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
 
-  const handleScroll = (event) => {
-    const currentScrollY = event.target.scrollTop;
-    const scrollPosition = event.target.scrollTop;
-    const element = document.getElementById('screenshots-section');
-    const contentHeight = element.scrollHeight;
-    const containerHeight = element.clientHeight;
-    const scrollableHeight = contentHeight - containerHeight;
-
-    if (currentScrollY === 0 || (currentScrollY > prevScrollY.current && scrollPosition < scrollableHeight)) {
-      console.log("scrolling down")
-      setDownArrow(true);
-    } else if (currentScrollY === scrollableHeight || currentScrollY < prevScrollY.current) {
-      console.log("scrolling up")
-      setDownArrow(false);
+  const goToNextImage = () => {
+    if (currentImage < images.length - 1) {
+      setCurrentImage(currentImage + 1)
     }
-    prevScrollY.current = currentScrollY;
-  }
+  };
 
-  const scrollToNextImage = (e) => {
-    const container = e.currentTarget.parentElement;
-    container.scrollBy(0, 360);
-  }
+  useEffect(() => {
+    if (currentImage === images.length - 1) {
+      setRightArrowVisible(false)
+    } else if (currentImage < images.length - 1) {
+      setRightArrowVisible(true)
+    }
+    if (currentImage === 0) {
+      setLeftArrowVisible(false)
+    } else if (currentImage > 0) {
+      setLeftArrowVisible(true)
+    }
+  }, [currentImage]);
 
-  const scrollToPreviousImage = (e) => {
-    const container = e.currentTarget.parentElement;
-    container.scrollBy(0, -360);
+  const goToPreviousImage = () => {
+    console.log("go to previous")
+    if (currentImage > 0) {
+      setCurrentImage(currentImage - 1)
+    }
   }
 
   return (
     <>
-      <div id="screenshots-section" className="h-[100%] w-[100%] mx-auto scroll-snap-y mandatory overflow-y-scroll screenshots px-0 md:px-14" onScroll={handleScroll}>
-        {images.map((image, i) => <Image key={i} image={image} />)}
-        {downArrow ?
-          <FontAwesomeIcon
-            icon={faArrowDown}
-            className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce" onClick={scrollToNextImage}
-          /> : <FontAwesomeIcon
-            icon={faArrowUp}
-            className="absolute right-[20px] bottom-[20px] text-[22px] animate-bounce" onClick={scrollToPreviousImage}
-          />}
+      <div id="screenshots-section" className="h-[100%] w-[100%] mx-auto flex items-center screenshots px-0 md:px-8">
+        <Image image={images[currentImage]} active={true}/>
+        {rightArrowVisible && <FontAwesomeIcon
+          icon={faCircleArrowRight}
+          className="absolute top-[50%] right-6 text-[28px]"
+          onClick={goToNextImage}
+        />}
+        {leftArrowVisible && <FontAwesomeIcon
+          icon={faCircleArrowLeft}
+          className="absolute top-[50%] left-6 text-[28px] z-[20]"
+          onClick={goToPreviousImage}
+        />}
       </div>
     </>
   )
