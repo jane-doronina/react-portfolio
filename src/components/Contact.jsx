@@ -4,10 +4,10 @@ import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons'
 const Contact = () => {
   return (
     <section id="contact-me" className="pt-8 relative">
-      <div className="container px-4 md:px-0 flex flex-col md:flex-row z-[5] relative">
+      <div className="container px-6 md:px-0 flex flex-col md:flex-row z-[5] relative">
         <div className="md:w-[50%] mr-14">
-          <h3 className="text-5xl md:text-6xl leading-[50px] md:leading-[70px] border-b-4 border-b-darkGrey pb-8 text-darkGrey font-bold z-[5]">Searching for a Developer to join your team?</h3>
-          <p className="mt-3 text-3xl font-light text-grey">Let's create some <span className="font-bold z-[5]">great</span> things together!</p>
+          <h3 className="text-4xl md:text-6xl leading-[40px] md:leading-[70px] border-b-4 border-b-darkGrey pb-8 text-darkGrey font-bold z-[5]">Searching for a Developer to join your team?</h3>
+          <p className="mt-3 text-2xl md:text-3xl font-light text-grey">Let's create some <span className="font-bold z-[5]">great</span> things together!</p>
         </div>
         <form name="contact" className="mt-5 md:w-[50%]" method="POST" netlify>
           <div className="flex justify-between">
@@ -23,7 +23,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <div className="bg-white w-full h-[180px] absolute bottom-0"></div>
+      <div className="bg-white w-full h-[120px] md:h-[180px] absolute bottom-0"></div>
     </section>
   )
 }
