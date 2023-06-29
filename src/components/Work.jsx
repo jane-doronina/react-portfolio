@@ -14,7 +14,7 @@ const Work = () => {
         <img src={stack} alt="Techstack" />
         <div className="grid grid-cols-3 gap-3 justify-between mt-4">
           {me.questions.map((question, i) => {
-            return <ReactFlipCard key={i} flipCardStyle={{width: "230px", height: "240px"}} flipTrigger='onClick'
+            return <ReactFlipCard key={i} flipCardStyle={{width: "250px", height: "230px"}} flipTrigger='onClick'
                     frontComponent={<FrontCard topic={question.topic} />}
                     backComponent={<BackCard question={question}/>} />
           })}

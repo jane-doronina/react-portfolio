@@ -11,7 +11,7 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="w-full bg-lightGrey h-[100vh]">
+    <section id="about" className="w-full bg-lightGrey h-auto">
       <div className="container mt-[50px]">
         <h2 className="text-5xl md:text-7xl text-white uppercase font-bold relative bottom-[-10px] md:bottom-[-15px] z-[0] ml-5">About me</h2>
         <div className="rounded-3xl w-[100%] h-[84vh] z-[1] relative flex">
