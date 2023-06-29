@@ -5,13 +5,15 @@ import { faCircleArrowRight, faCircleArrowLeft } from '@fortawesome/free-solid-s
 
 const Screenshots = ({ images }) => {
   const [rightArrowVisible, setRightArrowVisible] = useState(true);
-  const [leftArrowVisible, setLeftArrowVisible] = useState(false);
+  const [leftArrowVisible, setLeftArrowVisible] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
 
   const goToNextImage = () => {
     if (currentImage < images.length - 1) {
       setCurrentImage(currentImage + 1);
     }
+    const element = document.getElementById("screenshots-section")
+    element.scrollLeft += element.clientWidth
   };
 
   useEffect(() => {
@@ -31,30 +33,30 @@ const Screenshots = ({ images }) => {
     if (currentImage > 0) {
       setCurrentImage(currentImage - 1);
     }
+    const element = document.getElementById("screenshots-section")
+    element.scrollLeft -= element.clientWidth
   };
 
   return (
     <>
       <div
         id="screenshots-section"
-        className="h-[100%] w-[100%] mx-auto flex items-center screenshots px-0 md:px-8"
+        className="h-[100%] w-[100%] mx-auto flex items-center overflow-hidden scroll-smooth screenshots px-0"
       >
-        <Screenshot
-          image={images[currentImage]}
-          active={true}
-          preloadImages={images}
-        />
+      {images.map((image, index) => (
+        <Screenshot key={index} image={image} active={index === currentImage} />
+      ))}
         {rightArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowRight}
-            className="absolute top-[50%] right-6 text-[28px]"
+            className="absolute top-[50%] right-4 text-[28px]"
             onClick={goToNextImage}
           />
         )}
         {leftArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowLeft}
-            className="absolute top-[50%] left-6 text-[28px] z-[20]"
+            className="absolute top-[50%] left-4 text-[28px] z-[20]"
             onClick={goToPreviousImage}
           />
         )}
