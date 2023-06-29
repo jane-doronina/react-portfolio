@@ -132,6 +132,7 @@ a {
 
 .animate-image {
   animation: appear 1.2s ease-in-out;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes appear {

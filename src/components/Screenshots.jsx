@@ -41,7 +41,7 @@ const Screenshots = ({ images }) => {
     <>
       <div
         id="screenshots-section"
-        className="h-[100%] w-[100%] mx-auto flex items-center overflow-hidden scroll-smooth screenshots px-0"
+        className="h-[100%] w-[100%] mt-4 md:mt-0 mx-auto flex items-center overflow-hidden scroll-smooth screenshots px-0"
       >
       {images.map((image, index) => (
         <Screenshot key={index} image={image} active={index === currentImage} />
@@ -49,14 +49,14 @@ const Screenshots = ({ images }) => {
         {rightArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowRight}
-            className="absolute top-[50%] right-4 text-[28px]"
+            className="absolute bottom-4 md:top-[50%] right-4 text-[28px] z-[20]"
             onClick={goToNextImage}
           />
         )}
         {leftArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowLeft}
-            className="absolute top-[50%] left-4 text-[28px] z-[20]"
+            className="absolute bottom-4 md:top-[50%] left-4 text-[28px] z-[20]"
             onClick={goToPreviousImage}
           />
         )}
