@@ -25,7 +25,7 @@ const Projects = () => {
   const infoClassName = infoIsOpen ? 'info info-visible' : 'info';
 
   return (
-    <section id="projects" className="w-full bg-lightGrey h-[100vh]">
+    <section id="projects" className="w-full bg-lightGrey h-[100vh] mt-[100px] md:mt-0">
       <div className="container px-2 md:px-0 mt-0 md:mt-[50px]">
         <h2 className="text-5xl md:text-7xl text-white uppercase font-bold relative bottom-[-15px] z-[0] ml-5">Latest projects</h2>
         <div className="bg-white rounded-3xl w-[100%] h-[80vh] z-[1] relative flex flex-col-reverse md:flex-row">
