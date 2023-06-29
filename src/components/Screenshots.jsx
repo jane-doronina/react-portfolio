@@ -7,23 +7,6 @@ const Screenshots = ({ images }) => {
   const [rightArrowVisible, setRightArrowVisible] = useState(true);
   const [leftArrowVisible, setLeftArrowVisible] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const [imagePreloaded, setImagePreloaded] = useState(false);
-
-  useEffect(() => {
-    const preloadedImages = images.map((imageObj) => {
-      const image = new Image();
-      image.src = imageObj.img;
-      return image;
-    });
-
-    Promise.all(preloadedImages.map((image) => image.decode()))
-      .then(() => {
-        setImagePreloaded(true);
-      })
-      .catch((error) => {
-        console.error("Error preloading images:", error);
-      });
-  }, [images]);
 
   const goToNextImage = () => {
     if (currentImage < images.length - 1) {
@@ -56,13 +39,11 @@ const Screenshots = ({ images }) => {
         id="screenshots-section"
         className="h-[100%] w-[100%] mx-auto flex items-center screenshots px-0 md:px-8"
       >
-        {imagePreloaded && (
-          <Screenshot
-            image={images[currentImage]}
-            active={true}
-            preloadImages={images}
-          />
-        )}
+        <Screenshot
+          image={images[currentImage]}
+          active={true}
+          preloadImages={images}
+        />
         {rightArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowRight}
