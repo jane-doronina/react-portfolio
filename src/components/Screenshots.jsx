@@ -13,6 +13,7 @@ const Screenshots = ({ images }) => {
       setCurrentImage(currentImage + 1);
     }
     const element = document.getElementById("screenshots-section")
+    console.dir(element)
     element.scrollLeft += element.clientWidth
   };
 
@@ -34,6 +35,7 @@ const Screenshots = ({ images }) => {
       setCurrentImage(currentImage - 1);
     }
     const element = document.getElementById("screenshots-section")
+    console.dir(element)
     element.scrollLeft -= element.clientWidth
   };
 
@@ -41,7 +43,7 @@ const Screenshots = ({ images }) => {
     <>
       <div
         id="screenshots-section"
-        className="w-[100%] h-[100%] md:h-[100%] pb-12 md:grow md:mt-4 md:mt-0 mx-auto flex items-center overflow-hidden scroll-smooth screenshots px-0"
+        className="w-[100%] md:h-[100%] pb-12 md:grow md:mt-4 md:mt-0 mx-auto flex items-center overflow-hidden scroll-smooth screenshots px-0"
       >
       {images.map((image, index) => (
         <Screenshot key={index} image={image} active={index === currentImage} />

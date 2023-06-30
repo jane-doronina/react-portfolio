@@ -30,7 +30,7 @@ const Projects = () => {
           <div className="w-[100%] md:w-[30%] h-[40vh] md:h-[100%] grid grid-cols-2 md:block rounded-b-3xl md:rounded-l-3xl bg-darkGrey md:py-10 md:px-3">
             {projects.map(project => <MenuItem key={project.id} project={project} selected={project === selectedProject}/>)}
           </div>
-          <div className="w-[100%] md:w-[70%] h-[100%] flex flex-col relative px-2 md:px-14">
+          <div className="w-[100%] md:w-[70%] md:h-[100%] flex flex-col min-h-[345px] relative px-2 md:px-14">
             <div className="w-[100%] flex justify-between py-3 md:py-5">
               <Button text={infoIsOpen ? <FontAwesomeIcon icon={faXmark} className="font-light" /> : "Info" } padding={infoIsOpen ? "px-[14px]" : "px-[20px]" } bg={selectedProject.color} onClick={openInfoHandler}/>
               <div className="flex">
