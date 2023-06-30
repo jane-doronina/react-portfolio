@@ -78,7 +78,7 @@ const Screenshots = ({ images }) => {
         {mobileArrowVisible && (
           <FontAwesomeIcon
             icon={faArrowRight}
-            className="md:hidden animate-swipe absolute bottom-4 md:top-[50%] right-6 text-[28px] z-[20]"
+            className="md:hidden animate-swipe absolute bottom-4 md:top-[50%] right-6 text-[28px] z-[10]"
           />
         )}
         {rightArrowVisible && (
