@@ -6,6 +6,7 @@ import { faCircleArrowRight, faCircleArrowLeft } from '@fortawesome/free-solid-s
 const Screenshots = ({ images }) => {
   const [rightArrowVisible, setRightArrowVisible] = useState(true);
   const [leftArrowVisible, setLeftArrowVisible] = useState(true);
+  const [mobileArrowVisible, setMobileArrowVisible] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
 
   const goToNextImage = () => {
@@ -16,6 +17,12 @@ const Screenshots = ({ images }) => {
     console.dir(element)
     element.scrollLeft += element.clientWidth
   };
+
+  // useEffect(() => {
+  //   const container = document.getElementById("screenshots-section");
+  //   console.log(container.scrollLeft)
+  //   container.scrollLeft = 0
+  // }, []);
 
   useEffect(() => {
     if (currentImage === images.length - 1) {
@@ -39,26 +46,42 @@ const Screenshots = ({ images }) => {
     element.scrollLeft -= element.clientWidth
   };
 
+  const handleScroll = (e) => {
+    if (e.target.scrollLeft === 0) {
+      setMobileArrowVisible(true)
+    } else {
+      setMobileArrowVisible(false)
+    }
+  }
+
   return (
     <>
       <div
         id="screenshots-section"
-        className="w-[100%] md:h-[100%] pb-12 md:grow md:mt-4 md:mt-0 mx-auto flex items-center overflow-hidden scroll-smooth screenshots px-0"
+        className="w-[100%] md:h-[100%] pb-12 md:grow md:mt-4 md:mt-0 mx-auto flex items-center overflow-x-scroll md:overflow-hidden scroll-smooth screenshots px-0"
+        onScroll={handleScroll}
       >
       {images.map((image, index) => (
         <Screenshot key={index} image={image} active={index === currentImage} />
       ))}
+        {mobileArrowVisible && (
+          <FontAwesomeIcon
+            icon={faCircleArrowRight}
+            className="md:hidden animate-bounce absolute bottom-4 md:top-[50%] right-4 text-[28px] z-[20]"
+            onClick={goToNextImage}
+          />
+        )}
         {rightArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowRight}
-            className="absolute bottom-4 md:top-[50%] right-4 text-[28px] z-[20]"
+            className="hidden md:block absolute bottom-4 md:top-[50%] right-4 text-[28px] z-[20]"
             onClick={goToNextImage}
           />
         )}
         {leftArrowVisible && (
           <FontAwesomeIcon
             icon={faCircleArrowLeft}
-            className="absolute bottom-4 md:top-[50%] left-4 text-[28px] z-[20]"
+            className="hidden md:block absolute bottom-4 md:top-[50%] left-4 text-[28px] z-[20]"
             onClick={goToPreviousImage}
           />
         )}

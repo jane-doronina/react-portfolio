@@ -5,7 +5,7 @@ const Screenshot = ({image, active}) => {
   return (
     <img
       src={img}
-      className={`object-contain rounded-xl ${ type === "desktop" ? "border-8 border border-darkGrey" : ""} ${active ? "" : "opacity-50"} animate-image`}
+      className={`rounded-xl ${ type === "desktop" ? "border-8 border border-darkGrey" : ""} ${active ? "" : "md:opacity-50"} mr-4 md:mr-0 animate-image`}
       />
   )
 }
