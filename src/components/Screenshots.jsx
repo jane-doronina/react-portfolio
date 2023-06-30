@@ -1,13 +1,30 @@
 import Screenshot from "./Screenshot";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleArrowRight, faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCircleArrowRight, faCircleArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Screenshots = ({ images }) => {
   const [rightArrowVisible, setRightArrowVisible] = useState(true);
-  const [leftArrowVisible, setLeftArrowVisible] = useState(true);
+  const [leftArrowVisible, setLeftArrowVisible] = useState(false);
   const [mobileArrowVisible, setMobileArrowVisible] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
+  const [imagePreloaded, setImagePreloaded] = useState(false);
+
+  useEffect(() => {
+    const preloadedImages = images.map((imageObj) => {
+      const image = new Image();
+      image.src = imageObj.img;
+      return image;
+    });
+
+    Promise.all(preloadedImages.map((image) => image.decode()))
+      .then(() => {
+        setImagePreloaded(true);
+      })
+      .catch((error) => {
+        console.error("Error preloading images:", error);
+      });
+  }, [images]);
 
   const goToNextImage = () => {
     if (currentImage < images.length - 1) {
@@ -17,12 +34,6 @@ const Screenshots = ({ images }) => {
     console.dir(element)
     element.scrollLeft += element.clientWidth
   };
-
-  // useEffect(() => {
-  //   const container = document.getElementById("screenshots-section");
-  //   console.log(container.scrollLeft)
-  //   container.scrollLeft = 0
-  // }, []);
 
   useEffect(() => {
     if (currentImage === images.length - 1) {
@@ -62,13 +73,12 @@ const Screenshots = ({ images }) => {
         onScroll={handleScroll}
       >
       {images.map((image, index) => (
-        <Screenshot key={index} image={image} active={index === currentImage} />
+        imagePreloaded && <Screenshot key={index} image={image} active={index === currentImage} />
       ))}
         {mobileArrowVisible && (
           <FontAwesomeIcon
-            icon={faCircleArrowRight}
-            className="md:hidden animate-bounce absolute bottom-4 md:top-[50%] right-4 text-[28px] z-[20]"
-            onClick={goToNextImage}
+            icon={faArrowRight}
+            className="md:hidden animate-swipe absolute bottom-4 md:top-[50%] right-6 text-[28px] z-[20]"
           />
         )}
         {rightArrowVisible && (
