@@ -23,11 +23,11 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="w-full bg-lightGrey md:h-[100vh] mt-[100px] md:mt-0 z-[1]">
+    <section id="projects" className="w-full bg-lightGrey mt-[100px] md:mt-0 z-[1]">
       <div className="container px-2 md:px-0 mt-0 md:mt-[50px]">
         <h2 className="text-5xl md:text-7xl text-white uppercase font-bold relative bottom-[-15px] z-[0] ml-5">Latest projects</h2>
-        <div className="bg-white rounded-3xl w-[100%] md:h-[80vh] z-[1] relative flex flex-col-reverse md:flex-row">
-          <div className="w-[100%] md:w-[30%] h-[40vh] md:h-[100%] grid grid-cols-2 md:block rounded-b-3xl md:rounded-l-3xl bg-darkGrey md:py-10 md:px-3">
+        <div className="bg-white rounded-3xl w-[100%] md:h-auto md:min-h-[650px] z-[1] relative flex flex-col-reverse md:flex-row">
+          <div className="w-[100%] md:w-[30%] h-[40vh] md:h-auto grid grid-cols-2 md:block rounded-b-3xl md:rounded-l-3xl md:rounded-br-none bg-darkGrey md:py-10 md:px-3">
             {projects.map(project => <MenuItem key={project.id} project={project} selected={project === selectedProject}/>)}
           </div>
           <div className="w-[100%] md:w-[70%] md:h-[100%] flex flex-col min-h-[345px] relative px-2 md:px-14">
