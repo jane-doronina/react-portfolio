@@ -2,6 +2,8 @@ import remost1 from "../assets/remost1.png";
 import remost2 from "../assets/remost2.png";
 import remost3 from "../assets/remost3.png";
 import remost4 from "../assets/remost4.png";
+import remost5 from "../assets/remost5.png";
+import remost6 from "../assets/remost6.png";
 import remostmob from "../assets/remostmob.png";
 
 import furniture1 from "../assets/furniture1.png";
@@ -47,7 +49,7 @@ export const projects = [
     type: "Full-Stack Rails App",
     description: "Remost is a Ruby on Rails App for remote and hybrid teams which allows employees to find and meet their colleagues in different cities and get the best of both worlds: the freedom of a digital nomad's life and the human touch of an office's watercooler area.",
     techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
-    images: [ {img: remost1, type: "desktop"}, {img: remostmob, type: "mobile"}, {img: remost2, type: "desktop"}, {img: remost3, type: "desktop"}, {img: remost4, type: "desktop"} ],
+    images: [ {img: remost5, type: "desktop"}, {img: remost6, type: "desktop"}, {img: remost1, type: "desktop"}, {img: remostmob, type: "mobile"}, {img: remost2, type: "desktop"}, {img: remost3, type: "desktop"}, {img: remost4, type: "desktop"} ],
     url: "https://www.remost.io/",
     color: "bg-pink text-white",
   },
