@@ -14,7 +14,7 @@ const Navbar = () => {
             <li className='mr-2 md:mr-6 last:mr-0 nav-link'><a href="#contact-me" className="scroll-smooth">Contact</a></li>
           </ul>
           <div className='flex ml-2 justify-end'>
-            <a href="mailto:doronina.jane.work@gmail.com" className="icon-link">
+            <a href="mailto:work@zhanna-doronina.me" className="icon-link">
               <FontAwesomeIcon icon={faEnvelope} className="mr-2 md:mr-5 icon" />
             </a>
             <a href="https://www.linkedin.com/in/zhanna-doronina" className="icon-link" target="_blank" rel="noreferrer">
