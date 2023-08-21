@@ -75,20 +75,20 @@ const Screenshots = ({ images }) => {
       {images.map((image, index) => (
         imagePreloaded && <Screenshot key={index} image={image} active={index === currentImage} />
       ))}
-        {mobileArrowVisible && (
+        {mobileArrowVisible && imagePreloaded && (
           <FontAwesomeIcon
             icon={faArrowRight}
             className="md:hidden animate-swipe absolute bottom-4 md:top-[50%] right-6 text-[28px] z-[10]"
           />
         )}
-        {rightArrowVisible && (
+        {rightArrowVisible && imagePreloaded && (
           <FontAwesomeIcon
             icon={faCircleArrowRight}
             className="hidden md:block absolute bottom-4 md:top-[50%] right-4 text-[28px] z-[20]"
             onClick={goToNextImage}
           />
         )}
-        {leftArrowVisible && (
+        {leftArrowVisible && imagePreloaded && (
           <FontAwesomeIcon
             icon={faCircleArrowLeft}
             className="hidden md:block absolute bottom-4 md:top-[50%] left-4 text-[28px] z-[20]"
