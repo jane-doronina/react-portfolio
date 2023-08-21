@@ -82,7 +82,7 @@ export const projects = [
     description: "Remost is a Ruby on Rails App for remote and hybrid teams which allows employees to find and meet their colleagues in different cities and get the best of both worlds: the freedom of a digital nomad's life and the human touch of an office's watercooler area.",
     techStack: "Ruby on Rails, HTML, SASS, Stimulus JS, APIs, Bootstrap, PostgreSQL",
     images: [ {img: watchlist1, type: "desktop"}, {img: watchlist2, type: "desktop"}, {img: watchlist3, type: "desktop"}, {img: watchlist4, type: "desktop"} ],
-    url: "https://www.remost.io/",
+    url: "https://rails-watch-list-production.up.railway.app/",
     github: "https://github.com/jane-doronina/rails-watch-list",
     color: "bg-red text-white"
   },
