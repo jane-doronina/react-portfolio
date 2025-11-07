@@ -11,13 +11,13 @@ const App = () => (
     <Navbar />
     <Banner />
     <Routes>
-      <Route path="/" element={ <Projects />} />
-      <Route path="/projects/:projectId" element={ <Projects />} />
+      <Route path="/" element={<Projects />} />
+      <Route path="/projects/:projectId" element={<Projects />} />
     </Routes>
     <About />
     <Contact />
     <Footer />
   </div>
-)
+);
 
-export default App
+export default App;
