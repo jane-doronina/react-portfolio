@@ -1,8 +1,8 @@
 import avatar from "../assets/avatar.jpg";
 
 const Banner = () => (
-  <header className="pt-[40px] md:pt-[80px] relative z-[20] px-10">
-    <div className="container px-6 md:px-0 flex flex-col md:flex-row  md:items-center md:justify-between">
+  <header className="pt-[40px] md:pt-[80px] relative z-[20] md:px-10 px-6">
+    <div className="container flex flex-col md:flex-row  md:items-center md:justify-between">
       <div className="animated-title w-[80vw] h-[200px] md:h-[300px] text-[35px] md:text-[60px] font-bold z-[3]">
         <div className="text-top h-[50%] top-0 border-b-[3px] md:border-b-4 border-b-darkGrey">
           <div className="absolute py-[2vmin] px-0">

@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 
 const App = () => (
-  <div className="bg-lightGrey scroll-smooth">
+  <div className="bg-lightGrey scroll-smooth max-w-100vw overflow-x-hidden">
     <Navbar />
     <Banner />
     <Routes>
